@@ -1,0 +1,23 @@
+---
+title: "Data Acquisition and Manipulation Procedure"
+format: gfm 
+---
+
+This document outlines the step-by-step procedure for acquiring and manipulating the County Health Rankings data. The process involves two main stages:
+
+1.  **Web Scraping:** A Python script is used to download the raw data files for multiple years from the County Health Rankings & Roadmaps website.
+2.  **Data Manipulation:** An R script processes these raw files, cleans them, selects relevant columns, and combines them into two master datasets.
+
+------------------------------------------------------------------------
+
+### Step 1: Data Acquisition with Python
+
+The first step is to programmatically download the annual County Health Rankings data files from 2015 to 2020. This is accomplished using the Python script `02-web-scraping.py`.
+
+The script uses the `requests` library to fetch the data from specific URLs and saves the content into a local `./data/` directory. Although the files are saved with a `.csv` extension, their original format is Excel (`.xls` or `.xlsx`), which is handled in the next step.
+
+### Step 2: Data Manipulation with R
+
+Combining Yearly Data and Saving the Final Datasets
+
+The script `03-data-manipulation.R` combines the yearly data from the `./data/` directory into two master datasets: df_Ranked_Measure_Data_final and df_Additional_Measure_Data_final.

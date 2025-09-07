@@ -1,0 +1,29 @@
+---
+title: "Developing Valid Prediction Model to Predict Mentally Unhealthy Days"
+format: revealjs
+---
+
+## Data Acquisition and Manipulation Procedure
+
+The first step is to programmatically download the annual County Health Rankings data files from 2015 to 2020. This is accomplished using the Python script `02-web-scraping.py`.
+
+The script uses the `requests` library to fetch the data from specific URLs and saves the content into a local `./data/` directory. Although the files are saved with a `.csv` extension, their original format is Excel (`.xls` or `.xlsx`), which is handled in the next step.
+
+## Developing Predictive Model
+
+
+* Split the data (train/test),
+
+* Build a preprocessing recipe (median imputation + normalization),
+
+* Fit a linear regression baseline,
+
+* Tune a random forest (mtry, min_n) with 5-fold CV,
+
+* Compare models via RMSE,
+
+* Evaluate the chosen model on the held-out test set,
+
+
+## Conclusion
+
