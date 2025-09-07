@@ -1,6 +1,8 @@
 ---
 title: "Data Acquisition and Manipulation Procedure"
-format: gfm 
+format: 
+  gfm :
+    output-file: "README.md"
 ---
 
 This document outlines the step-by-step procedure for acquiring and manipulating the County Health Rankings data. The process involves two main stages:
